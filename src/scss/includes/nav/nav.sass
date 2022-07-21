@@ -1,0 +1,67 @@
+
+.nav
+    background: $c2
+    position: absolute
+    top: 0px
+    right: 0px
+    left: 0
+    width: 100%
+    height: 0
+    overflow: hidden
+    transition: .3s
+    &__title
+        color: $c1
+        font-weight: 400
+        font-size: 36px
+        position: relative
+        cursor: pointer
+        &::before
+            content: ''
+            top: 50%
+            left: -55px
+            transform: translateY(50%)
+            position: absolute
+            width: 45px
+            height: 2px
+            background-color: $c2
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            left: -100%
+            width: 200%
+            height: 100%
+            cursor: pointer
+    &__btn
+        width: 68px
+        height: 68px
+        position: fixed
+        top: 35px
+        right: 80px
+        background-image: url(../img/close.svg)
+        background-repeat: no-repeat
+        background-position: center
+        cursor: pointer
+        transition: all 0.5s 
+        display: none
+        z-index: 1000
+        &.active
+            display: inline-block
+        &:hover
+            transform: rotate(180deg)
+    &__list
+        padding-top: 150px
+        padding-left: 450px
+    &__item
+        margin-bottom: 104px
+        &-link
+            color: #fff
+            font-weight: 700
+            font-size: 72px
+            transition: all 0.2s
+            &:hover
+                color: $c1
+    &__social
+        position: absolute
+        left: 80px
+        bottom: 120px
